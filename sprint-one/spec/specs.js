@@ -50,6 +50,7 @@ define([
       });
 
       it('reports a size of 1 after adding two items and removing one', function() {
+        // debugger;
         stack.push('a');
         stack.push('b');
         stack.pop();

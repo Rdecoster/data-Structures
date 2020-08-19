@@ -9,7 +9,7 @@
    // using underscore to extend the methoids
   //  _.extend(newInstance, stackMethods)
  extend(newInstance, stackMethods)
-   // returns this instance as the object we are re-creating
+   // returns  instance as the object we are re-creating
   return newInstance;
   };
   var extend = function(destination, target){
@@ -24,14 +24,25 @@
 
   stackMethods.size = function() {
     return  this.storage.size;
-    console.log(this)
+
   }
 
   stackMethods.pop =function(){
+    if (this.storage.size === 0){
+      return undefined
+    }
+    var popped = this.storage[this.storage.size];
+    delete this.storage[this.storage.size]
+    this.storage.size--;
+    console.log(this.storage.size)
+    return popped;
+
 
   }
 
   stackMethods.push = function(value){
+    this.storage.size++;
+    this.storage[this.storage.size] = value;
 
   }
 
