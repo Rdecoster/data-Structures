@@ -138,7 +138,7 @@ define([
       });
 
       it('allows sequentially adding and removing items', function() {
-
+        // debugger;
         queue.enqueue('a');
         expect(queue.dequeue()).to.equal('a');
         queue.enqueue('b');
@@ -149,7 +149,7 @@ define([
 
     describe('queue-specific behavior', function() {
       it('removes the least recently added of two items', function() {
-        // debugger;
+
         queue.enqueue('a');
         queue.enqueue('b');
         expect(queue.dequeue()).to.equal('a');
