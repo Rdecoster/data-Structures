@@ -63,6 +63,7 @@ define([
       });
 
       it('allows sequentially additing and removing items', function() {
+
         stack.push('a');
         expect(stack.pop()).to.equal('a');
         stack.push('b');
@@ -135,6 +136,7 @@ define([
       });
 
       it('allows sequentially adding and removing items', function() {
+
         queue.enqueue('a');
         expect(queue.dequeue()).to.equal('a');
         queue.enqueue('b');
@@ -145,6 +147,7 @@ define([
 
     describe('queue-specific behavior', function() {
       it('removes the least recently added of two items', function() {
+        // debugger;
         queue.enqueue('a');
         queue.enqueue('b');
         expect(queue.dequeue()).to.equal('a');
