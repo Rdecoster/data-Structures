@@ -114,6 +114,7 @@ define([
       });
 
       it('reports a size of 2 after adding two items', function() {
+
         queue.enqueue('a');
         queue.enqueue('b');
         expect(queue.size()).to.equal(2);
