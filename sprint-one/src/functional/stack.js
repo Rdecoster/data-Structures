@@ -12,8 +12,6 @@ storage.size = 0;
     storage.size++;
     storage[storage.size] = value;
 
-
-
   };
 // remove last key in object and update size
   someInstance.pop = function() {
