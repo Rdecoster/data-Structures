@@ -18,16 +18,16 @@ var extened = function(desination, target) {
 var queueMethods = {};
 
 queueMethods.enqueue = function(value) {
-  this.end++;
   this.storage[this.end] = value;
+  this.end++;
 };
 
 queueMethods.dequeue = function () {
   if (this.size() === 0) {
     return undefined;
   }
-  this.start++;
   var removed = this.storage[this.start];
+  this.start++;
   delete this.storage[this.start];
 
   return removed;

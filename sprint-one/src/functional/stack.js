@@ -35,3 +35,6 @@ var Stack = function() {
 
   return someInstance;
 };
+var funncStack = Stack();
+console.log(funncStack, 'funcstack');
+console.log(funncStack.storage);
