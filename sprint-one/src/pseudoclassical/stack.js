@@ -1,28 +1,28 @@
 var Stack = function() {
   this.counter = 0;
-  this.storage ={};
+  this.storage = {};
 };
 
 Stack.prototype.size = function() {
- return this.counter
-}
+  return this.counter;
+};
 
 Stack.prototype.pop = function() {
-  if (this.counter ===0){
+  if (this.counter === 0) {
     return undefined;
   }
-  var popped = this.storage[this.counter]
-  delete this.storage[this.counter]
+  var popped = this.storage[this.counter];
+  delete this.storage[this.counter];
   this.counter--;
   return popped;
 
-}
+};
 
 Stack.prototype.push = function(value) {
-  this.counter++
+  this.counter++;
   this.storage[this.counter] = value;
-}
+};
 
-var psdoClass = new Stack()
-console.log(psdoClass, "Stack pseudoClassical")
+var psdoClass = new Stack();
+console.log(psdoClass, 'Stack pseudoClassical');
 

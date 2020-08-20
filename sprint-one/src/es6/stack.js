@@ -1,7 +1,30 @@
 class Stack {
-  // Hey! Rewrite in the new style. Your code will wind up looking very similar,
-  // but try not not reference your old code in writing the new style.
+
   constructor() {
+    this.counter = 0;
+    this.storage = {};
+  }
+  push (value) {
+    this.counter++;
+    this.storage[this.counter] = value;
+  }
+
+  pop () {
+
+    if (this.counter === 0) {
+      return undefined;
+    }
+    var popped = this.storage[this.counter];
+    delete this.storage[this.counter];
+    this.counter--;
+    return popped;
+
+  }
+  size () {
+    return this.counter;
   }
 
 }
+
+var es6Stack = new Stack;
+console.log(es6Stack, 'ES6 stack');

@@ -1,39 +1,36 @@
- // Hey! Rewrite in the new style. Your code will wind up looking very similar,
-  // but try not not reference your old code in writing the new style.
 
-  // had to change my variables names to counter
+// had to change my variables names to counter
 
 var Stack = function() {
- var newStack = Object.create(stackMethods);
- newStack.counter = 0;
- newStack.storage ={};
-return newStack;
+  var newStack = Object.create(stackMethods);
+  newStack.counter = 0;
+  newStack.storage = {};
+  return newStack;
 };
 
 
 stackMethods = {};
 
-stackMethods.push = function(value){
-  this.counter++
+stackMethods.push = function(value) {
+  this.counter++;
   this.storage[this.counter] = value;
 };
 
 stackMethods.pop = function() {
 
-  if (this.counter ===0){
+  if (this.counter === 0) {
     return undefined;
   }
-  var popped = this.storage[this.counter]
-  delete this.storage[this.counter]
+  var popped = this.storage[this.counter];
+  delete this.storage[this.counter];
   this.counter--;
   return popped;
-
 };
+
 stackMethods.size = function() {
   return this.counter;
-
 };
 
 
-var newStack = Stack()
-console.log(newStack, "proto")
+var newStack = Stack();
+console.log(newStack, 'proto');
