@@ -31,7 +31,6 @@ var LinkedList = function() {
     }
     list.tail = newNode;
 
-
   };
 
 
@@ -52,19 +51,21 @@ var LinkedList = function() {
     // untill we reacch tail.
     //
     var nodeSearch = function (node) {
-      if (node.value === target) {
-        return true;
-      } else if (node.next === true) {
-        nodeSearch(node.next);
-      } else {
-        console.log('!!!');
-        return false;
-      }
-    };
 
+      if (node.value === target) {
+
+        return true;
+      } else if (node.next === null) {
+
+        return false;
+
+      } else {
+        return nodeSearch(node.next);
+      }
+
+    };
     return nodeSearch(list.head);
   };
-
 
   return list;
 };

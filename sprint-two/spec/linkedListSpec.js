@@ -38,11 +38,11 @@ describe('linkedList', function() {
   });
 
   it('should contain a value that was added', function() {
+
     linkedList.addToTail(4);
-    console.log(linkedList);
     linkedList.addToTail(5);
-    console.log(linkedList);
     expect(linkedList.contains(4)).to.equal(true);
+    // debugger;
     expect(linkedList.contains(5)).to.equal(true);
     expect(linkedList.contains(6)).to.equal(false);
   });
