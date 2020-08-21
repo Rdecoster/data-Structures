@@ -29,15 +29,15 @@ treeMethods.contains = function(target) {
     return true;
   }
   //have to check newTree has a children in Array[]
-  if ( this.children.length >= 0) {
+  if ( this.children.length > 0) {
     //go to each child to check what value child has iterate through
     // if no current value check children Array exists
     for (var i = 0; i < this.children.length; i += 1) {
-      if (this.children[i] === target) {
+      if (this.children[i].value === target) {
         return true;
       }
       if ( this.children[i].children === !undefined) {
-        return treeMethods.contans(this.children[i].children);
+        return treeMethods.contans(target);
       }
     }
   }
