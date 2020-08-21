@@ -33,12 +33,12 @@ treeMethods.contains = function(target) {
     //go to each child to check what value child has iterate through
     // if no current value check children Array exists
     for (var i = 0; i < this.children.length; i += 1) {
-      if (this.children[i].value === target) {
+      if (this.children[i].contains(target)) {
         return true;
       }
-      if ( this.children[i].children === !undefined) {
-        return treeMethods.contans(target);
-      }
+      // if ( this.children[i].children === !undefined) {
+      //   return this.contans(target);
+      // }
     }
   }
 
