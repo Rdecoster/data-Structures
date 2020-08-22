@@ -24,7 +24,7 @@ var LimitedArray = function(limit) {
   limitedArray.set = function(index, value) {
     checkLimit(index);
     storage[index] = value;
-    console.log(index, '   <-index' , value, '   <-value'  ,storage, '  from set');
+    console.log(index, '   <-index', value, '   <-value', storage, '  from set');
   };
 
   limitedArray.each = function(callback) {
