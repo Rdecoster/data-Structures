@@ -32,11 +32,8 @@ Graph.prototype.contains = function(node) {
 Graph.prototype.removeNode = function(node) {
 
   this.forEachNode((checkNodes)=> {
-    console.log(this,"this");
 
     this.removeEdge(checkNodes, node);
-
-    console.log(this,"this after");
   });
   // delete note which is required
   delete this.storage[node];
