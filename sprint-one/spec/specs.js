@@ -35,6 +35,7 @@ define([
       verifyClass(instantiator).followsPattern(variant, {}, prototypeOfInstances);
 
       it('reports a size of zero for a new stack', function() {
+        // debugger;
         expect(stack.size()).to.equal(0);
       });
 
@@ -49,6 +50,7 @@ define([
       });
 
       it('reports a size of 1 after adding two items and removing one', function() {
+        // debugger;
         stack.push('a');
         stack.push('b');
         stack.pop();
@@ -63,6 +65,7 @@ define([
       });
 
       it('allows sequentially additing and removing items', function() {
+
         stack.push('a');
         expect(stack.pop()).to.equal('a');
         stack.push('b');
@@ -111,6 +114,7 @@ define([
       });
 
       it('reports a size of 2 after adding two items', function() {
+
         queue.enqueue('a');
         queue.enqueue('b');
         expect(queue.size()).to.equal(2);
@@ -135,6 +139,7 @@ define([
       });
 
       it('allows sequentially adding and removing items', function() {
+        // debugger;
         queue.enqueue('a');
         expect(queue.dequeue()).to.equal('a');
         queue.enqueue('b');
@@ -145,6 +150,7 @@ define([
 
     describe('queue-specific behavior', function() {
       it('removes the least recently added of two items', function() {
+
         queue.enqueue('a');
         queue.enqueue('b');
         expect(queue.dequeue()).to.equal('a');
@@ -164,3 +170,4 @@ define([
 
   window.mochaPhantomJS ? mochaPhantomJS.run() : mocha.run();
 });
+ console.log("hello!!!")

@@ -5,3 +5,4 @@
 **/vendor
 **/*.min.js
 sprint-one/spec/verifyClass.js
+ .eslintrc.json
