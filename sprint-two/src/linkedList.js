@@ -3,14 +3,7 @@ var LinkedList = function() {
   list.head = null;
   // would be and address starting with list.node.value = value of tail
   list.tail = null;
-  // list.node.next.next.value
-
-
-  // {
-  //  head: {value: 1, next: null} ,
-  //  tail: {value:3 , next: { value:2, next: { value: 1 , next: null }   } }
-  //  }
-
+  // list.node.next.next.valu
 
   list.addToTail = function(value) {
     var newNode = Node(value);
@@ -46,10 +39,7 @@ var LinkedList = function() {
     // Start iterating through list head.
     // evalualte the value if matches target return ture;
 
-    // check value in the first position if no matches need to go to the next. if no matches reapeate.
-
-    // untill we reacch tail.
-    //
+    // check value in the first position if no matches need to go to the next. if no matches reapeate.untill we reacch tail
     var nodeSearch = function (node) {
 
       if (node.value === target) {
@@ -84,4 +74,3 @@ var Node = function(value) {
  */
 
 
-var newNode = Node();
